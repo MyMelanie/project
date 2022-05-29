@@ -182,3 +182,100 @@ for(let i = 0; i <= lines; i++) {
 }
 
 console.log(result);
+
+
+function sayHello(name) {
+    return `Привет, ${name}!`;
+}
+
+sayHello('Alex');
+console.log(sayHello);
+
+
+let num = 20;
+
+function showFirstMessage(text) {
+    console.log(text);
+    console.log(num);
+}
+
+showFirstMessage('jsnglkjn');
+console.log(num);
+
+
+function test() {
+    let num = 100;
+    return num;
+}
+
+const anotherNum = test();
+console.log(anotherNum);
+
+
+const usdCurr = 28;
+const discount = 0.9;
+function convert(amount, curr) {
+    return curr * amount;
+}
+function promotion(result) {
+    console.log(result * discount);
+}
+
+promotion(convert(500, usdCurr));
+
+function test() {
+    for(let i = 0; i < 7; i++) {
+        console.log(i);
+        if(i === 6) return;
+    }
+    console.log('Proverka');
+}
+test();
+
+function doNothing() {};
+console.log(doNothing());
+
+
+//HW 27.1
+
+function sayHello(name) {
+    console.log(`Привет, ${name}!`);
+}
+
+sayHello('Антон');
+
+// 27.2
+function returnNeighboringNumber(number) {
+    console.log([number - 1, number, number + 1]);
+}
+
+returnNeighboringNumber(5);
+
+//27.3
+
+
+function getMathResult(a, b) {
+    if (typeof(b) != 'number' || b <= 0) {
+        return a;
+    }
+
+    let str = '';
+
+    for(let i = 1; i <= b; i++) {
+    if(i === b) {
+        str = str + `${a * i}`; //последнее число без тире
+    } else{  
+        str = str + `${a * i}`+ '---';
+    // str = str + a * i;
+    }
+  }
+  return str;
+}
+
+//console.log(getMathResult(5,3));
+//console.log(getMathResult(3,10));
+//console.log(getMathResult(10,5));
+//console.log(getMathResult(10,'5'));
+//console.log(getMathResult(10,0));
+console.log(getMathResult(20,-5));
+
